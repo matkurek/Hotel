@@ -1,0 +1,56 @@
+﻿@model Hotel.ViewModels.PokojeListaViewModel
+@{
+    ViewData["Title"] = "Lista";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Lista wszystkich pokoi w hotelu</h1>
+
+
+<table class="table table-bordered table-hover">
+    <tr>
+        <td> numer </td>
+        <td> szczegóły </td>
+        <td> zmiana opisu </td>
+
+    </tr>
+    <tbody>
+        @foreach (var pokoj in Model.Pokoje)
+        {
+        <tr>
+            <td>
+                <b>@Html.Raw(pokoj.Numer.ToString())</b>
+            </td>
+            <td>
+                @Html.ActionLink("Pokaż szczegóły",
+                "Pokaz",
+                "Pokoj",
+                new { numer = @pokoj.Numer }, // <-- Route arguments.
+                null
+                )
+            </td>
+            <td>
+                @Html.ActionLink("Zmień opis tego pokoju",
+                "Zmien",
+                "Pokoj",
+                new { numer = @pokoj.Numer }, // <-- Route arguments.
+                null
+                )
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+
+@*<ul>
+    @foreach (var pokoj in Model.Pokoje)
+    {
+        <tr>
+            <li>@pokoj.Numer</li>
+            <li>@pokoj.Rodzaj</li>
+            <li>@pokoj.Cena</li>
+        </tr>
+
+    }
+</ul>*@
+

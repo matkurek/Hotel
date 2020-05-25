@@ -1,0 +1,55 @@
+﻿@model Hotel.ViewModels.RezerwacjeListaViewModel
+@{
+    ViewData["Title"] = "Lista";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Lista Rezerwacji</h1>
+@Html.ActionLink("Dodaj nową rezerwację",
+                                    "dodaj",
+                                    "Rezerwacja",
+                                    new { numer = 0 }, // <-- Route arguments.
+                                    null
+                                    )
+<table class="table table-bordered table-hover">
+    
+    <tbody>
+        <tr>
+            <td> id </td>
+            <td> od kiedy </td>
+            <td> do kiedy </td>
+            <td> numer pokoju </td>
+            <td> czasu pobytu (dni) </td>
+            <td> przychód </td>
+        </tr>
+            @foreach (var rezerwacja in Model.Rezerwacje)
+            {
+            <tr>
+                <td>
+                    @Html.Raw(rezerwacja.id.ToString())
+                </td>
+                <td>
+                    @Html.Raw(rezerwacja.dataOd.ToString("yyyy-MM-dd"))
+                </td>
+                <td>
+                    @Html.Raw(rezerwacja.dataDo.ToString("yyyy-MM-dd"))
+                </td>
+                <td>
+                    @Html.ActionLink(rezerwacja.pokojNumer.ToString(),
+                                    "Pokaz",
+                                    "Pokoj",
+                                    new { numer = @rezerwacja.pokojNumer.ToString() }, // <-- Route arguments.
+                                    null
+                                    )
+                </td>
+                <td>
+                    @Html.Raw(rezerwacja.ileDni.ToString())
+                </td>
+                <td>
+                    <b> @Html.Raw(rezerwacja.przychod.ToString()) </b> zł 
+                </td>
+            </tr>
+        }
+        </tbody>
+</table>
+

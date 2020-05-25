@@ -1,0 +1,15 @@
+﻿@model Hotel.Models.Pokoj
+@{
+    ViewData["Title"] = "Zmien";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Zmień opis pokoju numer <b>@Model.Numer</b></h1>
+@using (Html.BeginForm())
+{
+    <br />
+    @Html.Label("Wprowadź nowy opis pokoju") @Html.ValueFor(model => model.Numer)<br />
+    @Html.TextAreaFor(model => model.DodatkoweInformacje, new { style = "width: 700px; height:150px;" })<br />
+
+    <button type="submit">Zmień</button>
+}

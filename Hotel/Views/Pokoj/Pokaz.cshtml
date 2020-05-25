@@ -1,0 +1,24 @@
+﻿@model Hotel.Models.Pokoj
+@{
+	ViewData["Title"] = "Pokaz";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Szczegóły pokoju numer @Model.Numer</h2>
+<h5>Rodzaj pokoju: <b> @Model.Rodzaj</b></h5>
+<h5>Standardowa cena: <b>@Model.Cena</b>  zł / noc</h5>
+<table class="table table-bordered table-hover">
+    <thead>
+    <th>Opis pokoju</th>
+    </thead>
+    <tbody>
+    <td> @Model.DodatkoweInformacje</td>
+    </tbody>
+    @Html.ActionLink("Pokaż wszystkie rezerwacje dla tego pokoju",
+                    "lista",
+                    "Rezerwacja",
+                    new { numerPokoju = @Model.Numer }, // <-- Route arguments.
+                    null
+                    )
+</table>
+

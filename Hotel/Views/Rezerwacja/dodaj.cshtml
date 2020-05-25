@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "dodaj";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Dodawanie nowej rezerwacji</h1>
+<i>Podaj dane potrzebne do wprowadzenia rezerwacji</i>
+@using (Html.BeginForm())
+{
+    <br />
+    @Html.Label("Numer pokoju")<br />
+    @Html.TextBox("numerPokoju")
+    <br />
+    @Html.Label("Data rozpoczęcia rezerwacji (rrrr-mm-dd)")
+    @Html.TextBox("dataOd")
+    <br />
+    @Html.Label("Data zakończenia rezerwacji (rrrr-mm-dd)")
+    @Html.TextBox("dataDo")
+    <br />
+    <button type="submit">Dodaj</button>
+}

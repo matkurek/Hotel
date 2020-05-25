@@ -1,0 +1,12 @@
+D:\165460\KSR\Hotel\RabbitSerwer\bin\Debug\RabbitSerwer.exe.config
+D:\165460\KSR\Hotel\RabbitSerwer\bin\Debug\RabbitSerwer.exe
+D:\165460\KSR\Hotel\RabbitSerwer\bin\Debug\RabbitSerwer.pdb
+D:\165460\KSR\Hotel\RabbitSerwer\bin\Debug\Microsoft.Diagnostics.Tracing.EventSource.dll
+D:\165460\KSR\Hotel\RabbitSerwer\bin\Debug\RabbitMQ.Client.dll
+D:\165460\KSR\Hotel\RabbitSerwer\bin\Debug\Microsoft.Diagnostics.Tracing.EventSource.xml
+D:\165460\KSR\Hotel\RabbitSerwer\bin\Debug\RabbitMQ.Client.xml
+D:\165460\KSR\Hotel\RabbitSerwer\obj\Debug\RabbitSerwer.csprojAssemblyReference.cache
+D:\165460\KSR\Hotel\RabbitSerwer\obj\Debug\RabbitSerwer.csproj.CoreCompileInputs.cache
+D:\165460\KSR\Hotel\RabbitSerwer\obj\Debug\RabbitSerwer.csproj.CopyComplete
+D:\165460\KSR\Hotel\RabbitSerwer\obj\Debug\RabbitSerwer.exe
+D:\165460\KSR\Hotel\RabbitSerwer\obj\Debug\RabbitSerwer.pdb
